@@ -1,7 +1,12 @@
-# makersbnb
-# MakersBnB specification
+# MakersBnB
+
+## MakersBnB specification
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+
+### Entity relationship diagram for basic user stories
+
+![Entity relationship diagram for basic user stories](ERD.png)
 
 ### Headline specifications
 
@@ -24,7 +29,7 @@ I want to list my home(s) on makersbnb
 
 As a user
 So that I can best advertise my home(s)
-I want to be able to give it a; name, short description, price per night, 
+I want to be able to give it a; name, short description, price per night
 
 As a user
 So that I can specify when my home(s) is available
@@ -39,7 +44,7 @@ So that I can allow a booking
 I want to be able to approve a request
 
 As a user
-So that my booking doesnt clash 
+So that my booking doesn't clash 
 I only want to see available dates for a specific home 
 
 As a user
@@ -49,7 +54,7 @@ I want my home to remain listed until I have confirmed a booking
 
 ### MVP
 
-Login(mock)
-See list
-Add to list
+Login(mock)  
+See list  
+Add to list  
 
