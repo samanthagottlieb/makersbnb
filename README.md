@@ -20,8 +20,20 @@ We would like a web application that allows users to list spaces they have avail
 
 ```
 As a user
+So that I can see which homes can be booked
+I want to see a list of homes
+
+As a user
 So that I can use makersbnb
 I want to be able to sign-up  
+
+As a user
+So that I can make a booking associated with me
+I want to be able to log in
+
+As a user
+So that I can keep my account secure
+I want to be able to log out
 
 As a user  
 So that I can share my home(s)  
@@ -35,7 +47,7 @@ As a user
 So that I can specify when my home(s) is available
 I want to be able to offer a range of available dates  
 
-As a user 
+As a user
 So that I can have a break!
 I want to request to hire any home for one night
 
@@ -44,8 +56,8 @@ So that I can allow a booking
 I want to be able to approve a request
 
 As a user
-So that my booking doesn't clash 
-I only want to see available dates for a specific home 
+So that my booking doesn't clash
+I only want to see available dates for a specific home
 
 As a user
 So that I can gain max exposure
@@ -57,4 +69,3 @@ I want my home to remain listed until I have confirmed a booking
 Login(mock)  
 See list  
 Add to list  
-
