@@ -6,10 +6,6 @@ describe DatabaseConnection do
       DatabaseConnection.setup('makersbnb_test')
     end
   end
-  it 'this connection is persistent' do
-    connection = DatabaseConnection.setup('makersbnb_test')
-    expect(DatabaseConnection.connection).to eq connection
-  end
   describe '.query' do
     it 'executes a query via PG' do
       connection = DatabaseConnection.setup('makersbnb_test')

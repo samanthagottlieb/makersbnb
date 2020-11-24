@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
-group :test do
-  gem 'pg'
   gem 'sinatra'
+  gem 'pg'
+  gem 'pry'
+
+group :test do
+  gem 'rubocop'
   gem 'capybara', group: :test
   gem 'rspec', group: :test
   gem 'simplecov', require: false
