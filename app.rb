@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/user'
 
 class Makersbnb < Sinatra::Base
   enable :sessions
@@ -12,12 +13,13 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/signup' do
-    sessions['username'] = params['username']
+    session['username'] = params['username']
+    User.create(username: params['username'], email: params['email'], password: params['password'])
     redirect :welcome
   end
 
   get '/welcome' do
-    @username = sessions['username']
+    @username = session['username']
     erb :welcome
   end
 
