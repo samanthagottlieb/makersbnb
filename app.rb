@@ -25,6 +25,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/homes' do
+    @homes = Home.all
     erb :"homes/index"
   end
 

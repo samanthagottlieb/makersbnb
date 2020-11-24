@@ -21,7 +21,8 @@ class Home
        name: this['name'],
        description: this['description'],
        price: this['price'],
-       id: this['id']
+       id: this['id'],
+       user_id: this['user_id']
      )
    end
   end
