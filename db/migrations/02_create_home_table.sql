@@ -6,5 +6,5 @@ CREATE TABLE homes(
   price NUMERIC(6,2) NOT NULL,
   CONSTRAINT fk_user
     FOREIGN KEY(user_id)
-  	  REFERENCES users(id)
+  	  REFERENCES users(id)  
 );
