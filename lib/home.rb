@@ -15,15 +15,15 @@ class Home
   end
 
   def self.all
-   result = DatabaseConnection.query("SELECT * FROM homes")
-   result.map do |this|
-     Home.new(
-       name: this['name'],
-       description: this['description'],
-       price: this['price'],
-       id: this['id'],
-       user_id: this['user_id']
-     )
+    result = DatabaseConnection.query('SELECT * FROM homes')
+    result.map do |this|
+      Home.new(
+        name: this['name'],
+        description: this['description'],
+        price: this['price'],
+        id: this['id'],
+        user_id: this['user_id']
+      )
    end
   end
 end

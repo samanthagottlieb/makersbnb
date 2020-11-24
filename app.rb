@@ -3,7 +3,6 @@ require './lib/home'
 require './lib/user'
 require 'sinatra/base'
 
-
 class Makersbnb < Sinatra::Base
   enable :sessions
 
@@ -30,7 +29,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/homes' do
-    session[:username] != nil ? username = session[:username] : username = 'Guest'
+    session[:username] !=nil ? username = session[:username] : username = 'Guest'
     Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
 
     redirect '/homes'

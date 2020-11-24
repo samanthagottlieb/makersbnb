@@ -10,5 +10,4 @@ feature 'viewing index page' do
     expect(page).to have_content 100
     expect(page).to have_content 'Another lovely home'
   end
-
 end
