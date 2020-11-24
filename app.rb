@@ -16,6 +16,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/signup' do
+    session[:username] = 'Guest' # should become user.username
 
   end
 
@@ -28,7 +29,9 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/homes' do
-    Home.create(name: params[:name], description: params[:description], price: params[:price])
+    session[:username] != nil ? username = session[:username] : username = 'Guest'
+    Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
+
     redirect '/homes'
   end
 

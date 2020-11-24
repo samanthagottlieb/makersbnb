@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/database_connection_spec.rb": {
+      "/Users/stringiest/Projects/week_5/makersbnb/spec/database_connection_spec.rb": {
         "lines": [
           1,
           1,
@@ -21,7 +21,7 @@
           null
         ]
       },
-      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/creating_homes_spec.rb": {
+      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/creating_homes_spec.rb": {
         "lines": [
           1,
           1,
@@ -35,7 +35,7 @@
           null
         ]
       },
-      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/test_confirmation_spec.rb": {
+      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/test_confirmation_spec.rb": {
         "lines": [
           1,
           null,
@@ -48,18 +48,40 @@
           null
         ]
       },
-      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/viewing_homes_spec.rb": {
+      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/viewing_homes_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/stringiest/Projects/week_5/makersbnb/spec/home_spec.rb": {
         "lines": [
           1,
           1,
           1,
           null,
+          1,
+          null,
+          1,
+          1,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1606221350
+    "timestamp": 1606231455
   }
 }
