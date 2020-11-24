@@ -64,6 +64,34 @@ So that I can gain max exposure
 I want my home to remain listed until I have confirmed a booking
 ```
 
+## How to use the program
+
+### Cloning the repo & installing the necessary gems
+```sh
+$ git clone git@github.com:samanthagottleib/makersbnb.git
+$ cd makersbnb
+$ bundle
+```
+
+### Creating the database
+1. Connect to `psql`
+2. Create the database using the `psql` command `CREATE DATABASE makersbnb;`
+3. Connect to the database using the `psql` command `\c makersbnb;`
+4. Run the query we have saved in the file `01_create_user_table.sql`
+5. Run the query we have saved in the file `02_create_home_table.sql`
+6. Run the query we have saved in the file `03_create_availability_table.sql`
+7. Run the query we have saved in the file `04_create_booking_table.sql`
+
+### Setting up the test database
+1. Connect to `psql`
+2. Create the database using the `psql` command `CREATE DATABASE makersbnb_test;`
+3. Connect to the database using the `psql` command `\c makersbnb_test;`
+4. Run the query we have saved in the file `01_create_user_table.sql`
+5. Run the query we have saved in the file `02_create_home_table.sql`
+6. Run the query we have saved in the file `03_create_availability_table.sql`
+7. Run the query we have saved in the file `04_create_booking_table.sql`
+
+
 ### MVP
 
 Login(mock)  
