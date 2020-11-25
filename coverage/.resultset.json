@@ -1,12 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/stringiest/Projects/week_5/makersbnb/spec/database_connection_spec.rb": {
+      "/Users/rafaeloelmann/Projects/week_5/makersbnb/spec/user_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
           1,
           1,
+          null,
           1,
+          null,
           1,
           1,
           null,
@@ -14,29 +19,25 @@
           1,
           1,
           1,
-          1,
-          1,
+          null,
           null,
           null,
           null
         ]
       },
-      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/creating_homes_spec.rb": {
+      "/Users/rafaeloelmann/Projects/week_5/makersbnb/lib/user.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/test_confirmation_spec.rb": {
-        "lines": [
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          1,
           1,
           null,
           1,
@@ -68,18 +69,20 @@
         "lines": [
           1,
           1,
-          1,
           null,
           1,
           null,
           1,
+          null,
           1,
           1,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1606239218
+    "timestamp": 1606235417
   }
 }
