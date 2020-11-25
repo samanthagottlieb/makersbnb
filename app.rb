@@ -12,7 +12,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/signup' do
-    erb :signup
+    erb :"users/signup"
   end
 
   post '/signup' do
@@ -36,7 +36,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/homes' do
-    session[:username] !=nil ? username = session[:username] : username = 'Guest'
+    username = session[:username]
     Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
 
     redirect :homes
