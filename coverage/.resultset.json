@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Samantha/Projects/makersbnb/spec/database_connection_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/database_connection_spec.rb": {
         "lines": [
           1,
           1,
@@ -21,8 +21,10 @@
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/features/creating_homes_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/creating_homes_spec.rb": {
         "lines": [
+          1,
+          null,
           1,
           1,
           1,
@@ -35,7 +37,25 @@
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/features/signing_up_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/database_helpers.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/signing_up_spec.rb": {
         "lines": [
           1,
           null,
@@ -52,7 +72,7 @@
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/features/test_confirmation_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/test_confirmation_spec.rb": {
         "lines": [
           1,
           null,
@@ -64,24 +84,18 @@
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/features/viewing_homes_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/features/viewing_homes_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
           null,
-          1,
-          1,
           1,
           null,
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/home_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/home_spec.rb": {
         "lines": [
           1,
           1,
@@ -98,7 +112,7 @@
           null
         ]
       },
-      "/Users/Samantha/Projects/makersbnb/spec/user_spec.rb": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -123,6 +137,6 @@
         ]
       }
     },
-    "timestamp": 1606304762
+    "timestamp": 1606307086
   }
 }
