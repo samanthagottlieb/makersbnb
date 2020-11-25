@@ -49,7 +49,7 @@ class Makersbnb < Sinatra::Base
   post '/login' do
     user = User.create(username: params[:username], email: params[:email], password: params[:password])
     session[:user_id] = user.id
-    redirect('/bookmarks')
+    redirect('/homes')
   end
 
   run! if app_file == $0

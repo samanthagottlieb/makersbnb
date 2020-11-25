@@ -8,7 +8,6 @@ feature 'Logging in as a user' do
     fill_in(:password, with: 'roar123')
     click_button('Log in')
 
-    expect(current_path).to eq('/homes')
-    expect(page).to have_content('******pablito*******')
+    expect(page).to have_content('There are many horses')
   end
 end
