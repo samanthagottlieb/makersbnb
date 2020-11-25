@@ -12,7 +12,7 @@ feature 'Adding a new home' do
     expect(page).to have_content 60
   end
 
-  scenario 'A user is able to set available dates' do 
+  scenario 'A user is able to set available dates' do
     sign_up
     click_link('Add home')
     fill_in('name', with: 'Test home')

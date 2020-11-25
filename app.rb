@@ -1,8 +1,8 @@
 require './database_connection_setup'
+require './lib/availability'
 require './lib/home'
 require './lib/user'
 require 'sinatra/base'
-require './lib/user'
 
 class Makersbnb < Sinatra::Base
   enable :sessions
@@ -37,13 +37,14 @@ class Makersbnb < Sinatra::Base
 
   post '/homes' do
     username = session[:username]
-    Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
-
+    start_date = params[:start_date]
+    end_date = params[:end_date]
+    home = Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
+    Availability.create(home_id: home.id, start_date: start_date, end_date: end_date)
     redirect :homes
   end
 
-  get '/homes/availability' do 
-    p "in availability"
+  get '/homes/availability' do
     erb :"homes/availability"
   end
 
