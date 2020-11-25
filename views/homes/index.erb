@@ -1,0 +1,7 @@
+<ul>
+  <% @homes.each do |home| %>
+    <li><%= home.name %><br>
+      <%= home.description %> <%= home.price %>
+      </li>
+  <% end %>
+</ul>
