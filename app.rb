@@ -16,13 +16,13 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/signup' do
-    session['username'] = params['username']
-    User.create(username: params['username'], email: params['email'], password: params['password'])
-    redirect :welcome
+    session[:username] = params[:username]
+    User.create(username: params[:username], email: params[:email], password: params[:password])
+    redirect :homes
   end
 
   get '/welcome' do
-    @username = session['username']
+    @username = session[:username]
     erb :welcome
   end
 
@@ -39,7 +39,7 @@ class Makersbnb < Sinatra::Base
     session[:username] !=nil ? username = session[:username] : username = 'Guest'
     Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
 
-    redirect '/homes'
+    redirect :homes
   end
 
   run! if app_file == $0

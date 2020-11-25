@@ -1,17 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rafaeloelmann/Projects/week_5/makersbnb/spec/user_spec.rb": {
+      "/Users/Samantha/Projects/makersbnb/spec/database_connection_spec.rb": {
         "lines": [
           1,
-          null,
-          1,
-          null,
           1,
           1,
-          null,
           1,
-          null,
           1,
           1,
           null,
@@ -19,25 +14,46 @@
           1,
           1,
           1,
-          null,
+          1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/rafaeloelmann/Projects/week_5/makersbnb/lib/user.rb": {
+      "/Users/Samantha/Projects/makersbnb/spec/features/creating_homes_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Samantha/Projects/makersbnb/spec/features/signing_up_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
           null,
-          0,
-          null,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/Samantha/Projects/makersbnb/spec/features/test_confirmation_spec.rb": {
+        "lines": [
           1,
           null,
           1,
@@ -48,7 +64,7 @@
           null
         ]
       },
-      "/Users/stringiest/Projects/week_5/makersbnb/spec/features/viewing_homes_spec.rb": {
+      "/Users/Samantha/Projects/makersbnb/spec/features/viewing_homes_spec.rb": {
         "lines": [
           1,
           1,
@@ -65,24 +81,48 @@
           null
         ]
       },
-      "/Users/stringiest/Projects/week_5/makersbnb/spec/home_spec.rb": {
+      "/Users/Samantha/Projects/makersbnb/spec/home_spec.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
           null,
           1,
           null,
           1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Samantha/Projects/makersbnb/spec/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           1,
           1,
           1,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1606235417
+    "timestamp": 1606301521
   }
 }
