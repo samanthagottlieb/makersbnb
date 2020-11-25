@@ -7,6 +7,7 @@ class Home
     @name = name
     @description = description
     @price = price
+    @availability = [] 
   end
 
   def self.create(name:, description:, price:, username: 'Guest')

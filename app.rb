@@ -42,5 +42,10 @@ class Makersbnb < Sinatra::Base
     redirect :homes
   end
 
+  get '/homes/availability' do 
+    p "in availability"
+    erb :"homes/availability"
+  end
+
   run! if app_file == $0
 end
