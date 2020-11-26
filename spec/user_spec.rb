@@ -41,20 +41,37 @@ describe User do
     it 'returns a user given a correct username and password, if one exists' do
       user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
       authenticated_user = User.authenticate(username: 'pablo', password: 'password123')
-  
+
       expect(authenticated_user.id).to eq user.id
     end
-  
+
     it 'returns nil given an incorrect username' do
       user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
-  
+
       expect(User.authenticate(username: 'not pablo', password: 'password123')).to be_nil
     end
 
     it 'returns nil given an incorrect password' do
       user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
-  
+
       expect(User.authenticate(username: 'pablo', password: 'not_password123')).to be_nil
+    end
+  end
+
+
+  feature 'authentication' do
+    scenario 'a user can sign out' do
+      User.create(username: 'test', email: 'test1', password: 'password123')
+      visit '/sessions/new'
+      fill_in(:username, with: 'test')
+      fill_in(:password, with: 'password123')
+      click_button('Log in')
+
+      click_button('Log out')
+
+      expect(page).to have_content 'Homes to rent'
+      expect(page).to have_content 'You have signed out.'
+
     end
   end
 end

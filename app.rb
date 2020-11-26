@@ -39,7 +39,6 @@ class Makersbnb < Sinatra::Base
   post '/homes' do
     username = session[:username]
     Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
-
     redirect :homes
   end
 
@@ -54,9 +53,15 @@ class Makersbnb < Sinatra::Base
       session[:user_id] = user.id
       redirect('/homes')
     else
-      flash[:notice] = 'Incorrect username or password'
+      flash[:notice1] = 'Incorrect username or password'
       redirect('/sessions/new')
     end
+  end
+
+  post '/sessions/destroy' do
+    session.clear
+    flash[:notice] = 'You have signed out.'
+    redirect('/homes')
   end
 
   run! if app_file == $0

@@ -9,4 +9,13 @@
       <%= home.description %> <%= home.price %>
       </li>
   <% end %>
-</ul><br>
+</ul><br><br><br><br><br>
+
+
+<form action="/sessions/destroy" method="post">
+  <input type="submit" value="Log out" />
+</form>
+
+<h2>
+  <%= flash[:notice] %>
+</h2>
