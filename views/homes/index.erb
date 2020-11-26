@@ -7,7 +7,7 @@
     <li><%= home.name %><br>
       <%= home.description %> <%= home.price %> 
       <form method="get" action="/homes/availability">
-        <button name=<%= home.id %> type="submit">Check Availability</button>
+        <button name="<%= home.id %>" type="submit">Check Availability</button>
       </form>
       </li>
   <% end %>

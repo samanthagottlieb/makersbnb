@@ -1,4 +1,12 @@
-01/02/2021<br>
-02/02/2021<br>
-03/02/2021<br>
-04/02/2021
+Dates
+
+<h1> Available dates </h1>
+<ul>
+  <% @availability.each do |date| %>
+    <li><%= date %><br>
+      <form method="get" action="/homes/booking">
+        <button name=<%= date %> type="submit">Book</button>
+      </form>
+      </li>
+  <% end %>
+</ul><br>
