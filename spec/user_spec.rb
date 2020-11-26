@@ -13,6 +13,12 @@ describe User do
       expect(user.id).to eq result.first['id']
       expect(user.email).to eq 'pablo@email.com'
     end
+
+    it 'hashes the password using BCrypt' do
+      expect(BCrypt::Password).to receive(:create).with('password123')
+
+      User.create(username: 'pablo', email: 'pablo@email.com', password: 'password123')
+    end
   end
 
   describe '.find' do
@@ -28,6 +34,27 @@ describe User do
 
       expect(result.id).to eq user.id
       expect(result.email).to eq user.email
+    end
+  end
+
+  describe '.authenticate' do
+    it 'returns a user given a correct username and password, if one exists' do
+      user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
+      authenticated_user = User.authenticate(username: 'pablo', password: 'password123')
+  
+      expect(authenticated_user.id).to eq user.id
+    end
+  
+    it 'returns nil given an incorrect username' do
+      user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
+  
+      expect(User.authenticate(username: 'not pablo', password: 'password123')).to be_nil
+    end
+
+    it 'returns nil given an incorrect password' do
+      user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
+  
+      expect(User.authenticate(username: 'pablo', password: 'not_password123')).to be_nil
     end
   end
 end

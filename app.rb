@@ -2,10 +2,11 @@ require './database_connection_setup'
 require './lib/home'
 require './lib/user'
 require 'sinatra/base'
-require './lib/user'
+require 'sinatra/flash'
 
 class Makersbnb < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     erb :index
@@ -42,14 +43,20 @@ class Makersbnb < Sinatra::Base
     redirect :homes
   end
 
-  get '/sessions' do
+  get '/sessions/new' do
     erb :"sessions/new"
   end
 
   post '/sessions' do
     user = User.authenticate(username: params[:username], password: params[:password])
-    session[:user_id] = user.id
-    redirect('/homes')
+
+    if user
+      session[:user_id] = user.id
+      redirect('/homes')
+    else
+      flash[:notice] = 'Incorrect username or password'
+      redirect('/sessions/new')
+    end
   end
 
   run! if app_file == $0
