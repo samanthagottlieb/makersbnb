@@ -32,6 +32,7 @@ class Makersbnb < Sinatra::Base
 
   get '/homes' do
     @homes = Home.all
+    session[:name] = params[:name]
     erb :"homes/index"
   end
 
@@ -45,6 +46,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/homes/availability' do
+    @home_id = session[:name]
     erb :"homes/availability"
   end
 

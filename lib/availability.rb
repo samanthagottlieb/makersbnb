@@ -17,4 +17,14 @@ class Availability
     }
     Availability.new(id: result[0]['id'], home_id: result[0]['home_id'], date: result[0]['date'])
   end
+
+  def self.view(home_id:) 
+    result = DatabaseConnection.query("SELECT * FROM availability WHERE home_id = #{home_id};")
+    
+    list = result.to_a
+
+    dates = list.map { |entry| Date.parse(entry['date']).strftime("%d/%m/%Y") }
+   
+  end
+
 end

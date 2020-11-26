@@ -5,8 +5,12 @@
 <ul>
   <% @homes.each do |home| %>
     <li><%= home.name %><br>
-      <%= home.description %> <%= home.price %>
-      <a href="/homes/availability" >Check Availability</a>
+      <%= home.description %> <%= home.price %> 
+      <form method="get" action="/homes/availability">
+        <button name=<%= home.id %> type="submit">Check Availability</button>
+      </form>
       </li>
   <% end %>
 </ul><br>
+
+
