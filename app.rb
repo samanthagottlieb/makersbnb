@@ -42,12 +42,12 @@ class Makersbnb < Sinatra::Base
     redirect :homes
   end
 
-  get '/login' do
+  get '/sessions' do
     erb :"sessions/new"
   end
 
-  post '/login' do
-    user = User.create(username: params[:username], email: params[:email], password: params[:password])
+  post '/sessions' do
+    user = User.authenticate(username: params[:username], password: params[:password])
     session[:user_id] = user.id
     redirect('/homes')
   end

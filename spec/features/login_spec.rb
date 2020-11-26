@@ -8,6 +8,7 @@ feature 'Logging in as a user' do
     fill_in(:password, with: 'roar123')
     click_button('Log in')
 
-    expect(page).to have_content('There are many horses')
+    expect(page).to_not have_content('Error')
+    expect(page).to have_content('Homes to rent')
   end
 end

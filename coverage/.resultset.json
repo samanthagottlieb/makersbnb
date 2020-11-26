@@ -1,6 +1,18 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/chriswalsh/learning/interwebs/makersbnb/spec/auth_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/chriswalsh/learning/interwebs/makersbnb/spec/database_connection_spec.rb": {
         "lines": [
           1,
@@ -68,6 +80,7 @@
           1,
           null,
           1,
+          1,
           null,
           null
         ]
@@ -134,7 +147,6 @@
           1,
           null,
           1,
-          null,
           1,
           1,
           null,
@@ -143,17 +155,31 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           1,
           1,
           1,
           null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1606329986
+    "timestamp": 1606392521
   }
 }
