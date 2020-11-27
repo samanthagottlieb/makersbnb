@@ -3,6 +3,10 @@ require 'database_helpers'
 feature 'Adding a new home' do
   scenario 'A user can add a home to the list' do
     sign_up
+    click_link('Log in')
+    fill_in(:username, with: 'Pablito')
+    fill_in(:password, with: 'roar123')
+    click_button('Log in')
     click_link('Add home')
     fill_in('name', with: 'Test home')
     fill_in('price', with: '60')
@@ -14,6 +18,10 @@ feature 'Adding a new home' do
 
   scenario 'A user is able to set available dates' do
     sign_up
+    click_link('Log in')
+    fill_in(:username, with: 'Pablito')
+    fill_in(:password, with: 'roar123')
+    click_button('Log in')
     click_link('Add home')
     fill_in('name', with: 'Test home')
     fill_in('price', with: '60')

@@ -66,7 +66,8 @@ class Makersbnb < Sinatra::Base
   post '/sessions/destroy' do
     session.clear
     flash[:notice] = 'You have signed out.'
-    redirect('/homes')   
+    redirect('/homes')
+  end
 
   get '/homes/availability' do
     session[:name] = params.flatten[0]
