@@ -3,11 +3,10 @@ require 'user'
 describe User do
   describe '.create' do
     it 'creates a new user' do
-
       user = User.create(username: 'pablo', email: 'pablo@email.com', password: 'password123')
 
       connection = PG.connect(dbname: 'makersbnb_test')
-      result = connection.query("SELECT * FROM users;")
+      result = connection.query('SELECT * FROM users;')
 
       expect(user).to be_a User
       expect(user.id).to eq result.first['id']
@@ -23,7 +22,7 @@ describe User do
 
   describe '.find' do
     it 'returns nil if there is no ID given' do
-      user = User.create(username: 'pablo', email: 'pablo@email.com', password: 'password123')
+      User.create(username: 'pablo', email: 'pablo@email.com', password: 'password123')
 
       expect(User.find(nil)).to eq nil
     end
@@ -46,18 +45,17 @@ describe User do
     end
 
     it 'returns nil given an incorrect username' do
-      user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
+      User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
 
       expect(User.authenticate(username: 'not pablo', password: 'password123')).to be_nil
     end
 
     it 'returns nil given an incorrect password' do
-      user = User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
+      User.create(username: 'pablo', email: 'test@example.com', password: 'password123')
 
       expect(User.authenticate(username: 'pablo', password: 'not_password123')).to be_nil
     end
   end
-
 
   feature 'authentication' do
     scenario 'a user can sign out' do
@@ -71,7 +69,6 @@ describe User do
 
       expect(page).to have_content 'Homes to rent'
       expect(page).to have_content 'You have signed out.'
-
     end
   end
 end

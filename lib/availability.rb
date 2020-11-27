@@ -10,21 +10,24 @@ class Availability
   end
 
   def self.create(home_id:, start_date:, end_date:)
-    @availability = (Date.parse(start_date).to_date..Date.parse(end_date).to_date).map{ |date| date.strftime("%Y-%m-%d") }
+    @availability = (Date.parse(start_date).to_date..Date.parse(end_date).to_date).map { |date| date.strftime('%Y-%m-%d') }
 
-    result = @availability.each { |entry|
+    result = @availability.each do |entry|
       DatabaseConnection.query("INSERT INTO availability (home_id, date) VALUES(#{home_id}, '#{entry}') RETURNING id, home_id, date;")
-    }
+    end
     Availability.new(id: result[0]['id'], home_id: result[0]['home_id'], date: result[0]['date'])
   end
 
-  def self.view(home_id:) 
+  def self.view(home_id:)
     result = DatabaseConnection.query("SELECT * FROM availability WHERE home_id = #{home_id};")
-    
+
     list = result.to_a
 
-    dates = list.map { |entry| Date.parse(entry['date']).strftime("%d/%m/%Y") }
-   
+    list.map { |entry| Date.parse(entry['date']).strftime('%d/%m/%Y') }
   end
 
+  def self.remove(home_id:, date:)
+    result = DatabaseConnection.query("SELECT id FROM availability WHERE home_id = #{home_id} AND date = '#{Date.parse(date).to_date.strftime('%Y-%m-%d')}';")
+    DatabaseConnection.query("DELETE FROM availability WHERE id = #{result.first['id']};")
+  end
 end

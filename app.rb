@@ -5,7 +5,6 @@ require './lib/user'
 require 'sinatra/base'
 require 'sinatra/flash'
 
-
 class Makersbnb < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
@@ -38,14 +37,14 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/homes' do
-    username = session[:username] 
+    username = session[:username]
     start_date = params[:start_date]
     end_date = params[:end_date]
     home = Home.create(name: params[:name], description: params[:description], price: params[:price], username: username)
     Availability.create(home_id: home.id, start_date: start_date, end_date: end_date)
     redirect :homes
-  end  
-  
+  end
+
   get '/sessions/new' do
     erb :"sessions/new"
   end
@@ -74,6 +73,16 @@ class Makersbnb < Sinatra::Base
     home_id = session[:name]
     @availability = Availability.view(home_id: home_id)
     erb :"homes/availability"
+  end
+
+  get '/homes/booking' do
+    session[:date] = params.flatten[0]
+    Availability.remove(date: session[:date], home_id: session[:name])
+    redirect('homes/booking/confirmation')
+  end
+
+  get '/homes/booking/confirmation' do
+    erb :"homes/booking/confirmation"
   end
 
   run! if app_file == $0

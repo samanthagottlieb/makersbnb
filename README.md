@@ -2,11 +2,9 @@
 
 ## MakersBnB specification
 
-We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+Design a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
-### Entity relationship diagram for basic user stories
-
-![Entity relationship diagram for basic user stories](ERD.png)
+![Home page](Home_page.png)
 
 ### Headline specifications
 
@@ -41,7 +39,7 @@ I want to list my home(s) on makersbnb
 
 As a user
 So that I can best advertise my home(s)
-I want to be able to give it a; name, short description, price per night
+I want to be able to give it a name, short description, price per night
 
 As a user
 So that I can specify when my home(s) is available
@@ -64,7 +62,7 @@ So that I can gain max exposure
 I want my home to remain listed until I have confirmed a booking
 ```
 
-## How to use the program
+## How To Use the Program
 
 ### Cloning the repo & installing the necessary gems
 ```sh
@@ -91,9 +89,27 @@ $ bundle
 6. Run the query we have saved in the file `03_create_availability_table.sql`
 7. Run the query we have saved in the file `04_create_booking_table.sql`
 
+## Designing the Project
+
+### Entity Relationship Diagram for Basic User Stories
+
+![Entity relationship diagram for basic user stories](ERD.png)
 
 ### MVP
+We decided that our MVP was for a user to be able to sign up, to add a home and to be able to see a list of available homes.
 
-Login(mock)  
-See list  
-Add to list  
+### Current State of the Project
+User can sign up, and log in and out.  They have the ability to add a home, with availability, and to book one night in an available home.
+
+### Extensions to Project
+We would add the following extensions:
+* Ability for home owner to approve booking
+* Ability to add photos of your home
+* Ability for owner to see a page of their home's bookings
+* Ability for guest to see a page of their bookings
+* Confirmation emails and texts
+* A payment system (API)
+
+### Test Coverage
+
+![Test coverage](Test_coverage.png)

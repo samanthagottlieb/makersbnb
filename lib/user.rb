@@ -2,7 +2,6 @@ require 'bcrypt'
 require 'pg'
 
 class User
-
   attr_reader :id, :username, :email, :password
 
   def initialize(id:, username:, email:)
@@ -14,12 +13,13 @@ class User
   def self.create(username:, email:, password:)
     encrypted_password = BCrypt::Password.create(password)
     result = DatabaseConnection.query("INSERT INTO users (username, email, password) VALUES('#{username}', '#{email}', '#{encrypted_password}') RETURNING id, username, email;")
-    
+
     User.new(id: result[0]['id'], username: result[0]['username'], email: result[0]['email'])
   end
 
   def self.find(id)
     return nil unless id
+
     result = DatabaseConnection.query("SELECT * FROM users WHERE id = '#{id}'")
 
     User.new(id: result[0]['id'], username: result[0]['username'], email: result[0]['email'])

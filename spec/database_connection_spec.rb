@@ -6,6 +6,7 @@ describe DatabaseConnection do
       DatabaseConnection.setup('makersbnb_test')
     end
   end
+
   describe '.query' do
     it 'executes a query via PG' do
       connection = DatabaseConnection.setup('makersbnb_test')
