@@ -1,0 +1,12 @@
+Dates
+
+<h1> Available dates </h1>
+<ul>
+  <% @availability.each do |date| %>
+    <li><%= date %><br>
+      <form method="get" action="/homes/booking">
+        <button name=<%= date %> type="submit">Book</button>
+      </form>
+      </li>
+  <% end %>
+</ul><br>
