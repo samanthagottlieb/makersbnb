@@ -12,8 +12,8 @@
 
 <ul>
   <% @homes.each do |home| %>
-    <li><%= home.name.capitalize %>🏡<br>
-      <%= home.description.capitalize  %> £<%= home.price %> per night
+    <li><h5><%= home.name %>🏡</h5>
+      <i><%= home.description.capitalize  %></i><br> £<%= home.price %> per night
       <form method="get" action="/homes/availability">
         <button name="<%= home.id %>" type="submit">Check Availability</button>
       </form>
