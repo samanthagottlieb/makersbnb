@@ -1,6 +1,12 @@
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.1.min.css"/>
+</head>
+
 <h1>
   MakersBnB
 </h1>
+
+<img src="https://metro.co.uk/wp-content/uploads/2016/03/42782ff156d5e0a08ce68e8161864cb3.jpg?quality=90&strip=all" alt="alternatetext">
 
 <br><p>
   Welcome to MakersBnB, unsurprisingly, there are places to sleep. Pick one dammit. When you've logged in of course. <br>
@@ -8,8 +14,14 @@ And if you haven't signed up, well then duh, you need to do that first.</p><br><
 
 
 <a href="/signup" > Sign up </a><br>
-<a href="/sessions/new" > Log in </a><br>
-<a href="/homes" > Show me the homes </a><br>
+<form action="/sessions/new" method="get">
+  <input type="submit" value="Log in" />
+</form>
+
+<form action="/homes" method="get">
+  <input type="submit" value="Show me the homes" />
+</form>
+
 
 <div style="position: absolute; top: 50; right: 50; width: 100px; text-align:right;">
     <% if session[:username] == nil %>
