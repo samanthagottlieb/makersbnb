@@ -17,7 +17,6 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/signup' do
-    session[:username] = params[:username]
     User.create(username: params[:username], email: params[:email], password: params[:password])
     redirect :homes
   end
@@ -47,6 +46,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/sessions' do
+    session[:username] = params[:username]
     user = User.authenticate(username: params[:username], password: params[:password])
 
     if user

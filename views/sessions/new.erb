@@ -7,3 +7,12 @@
 <h2>
   <%= flash[:notice1] %>
 </h2>
+
+
+<div style="position: absolute; top: 50; right: 50; width: 100px; text-align:right;">
+    <% if session[:username] == nil %>
+      You are not logged in.
+    <% else %>
+      Logged in as: <%= session[:username] %>
+    <% end %>
+  </div>
